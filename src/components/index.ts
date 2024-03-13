@@ -5,6 +5,7 @@ import FollowMe from "./FollowMe";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 export  {
   Navbar,
@@ -14,5 +15,5 @@ export  {
   Projects,
   Skills,
   Contact,
-
+  Footer,
 }
