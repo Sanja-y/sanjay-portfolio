@@ -30,10 +30,20 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "wiggle": {
+          '0%, 100%': { transform: 'rotate(-90deg)' },
+          '50%': { transform: 'rotate(90deg)' },
+        },
+        "riggle": {
+          '0,100%' : {transform: 'rotate(-5deg)'},
+          '50%': { transform: 'rotate(5deg)' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "wiggle": 'wiggle 1s ease-in-out infinite',
+        "riggle": 'riggle 0.5s ease-in-out infinite',
       },
     },
   },

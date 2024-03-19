@@ -21,7 +21,8 @@ const formSchema = z.object({
     .min(2, { message: "Atleast 2 Characters are required" })
     .max(50),
   email: z.string()
-    .email({ message: "Please enter a valid email" }),
+    .email()
+    .min(10,{ message: "Please enter a valid email" }),
   message: z.string()
     .min(7, { message: "Atleast 7 characters are required" })
     .max(1050, { message: "Only 1050 characters are allowed" })
@@ -38,7 +39,7 @@ const Contact: React.FC = () => {
   })
 
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log("Lost value", values);
+    console.log("Mail value", values);
   }
 
   return (
@@ -60,7 +61,7 @@ const Contact: React.FC = () => {
                       <FormItem className='my-6'>
                         <FormLabel>Full name*</FormLabel>
                         <FormControl>
-                          <Input placeholder='Your name' className='bg-[#3f110ee1] focus:border-0 border-0 rounded-xl  px-6' />
+                          <Input placeholder='Your name' className='bg-[#3f110ee1] focus:border-0 border-0 rounded-xl  px-6' {...field} />
                         </FormControl>
                         {/* <FormDescription>
                       Enter your name

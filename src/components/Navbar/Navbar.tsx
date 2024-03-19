@@ -2,7 +2,7 @@ import React from 'react'
 const links = ["Home", "Projects", "Contact"]
 const Navbar: React.FC = () => {
   return (
-    <>
+    <div className=' px-[20rem]'>
       <nav className='flex flex-row w-full bg-gradient-to-t from-[#4940405d] to-[#2c282881]  
        rounded-[4rem] justify-between items-center h-[6rem] pl-8 pr-8 overflow-clip'>
         <div className='flex flex-row space-x-[4rem] items-center justify-center'>
@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
           }
         </div>
       </nav>
-    </>
+    </div>
   )
 }
 

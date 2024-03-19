@@ -7,7 +7,7 @@ interface ProgressProps {
 }
 const Progress:React.FC<ProgressProps> = ({score,progressColor,completedColor}) => {
   return (
-    <div className='w-full relative flex space-x-4 items-center mx-4'>
+    <div className='w-full relative flex space-x-6 items-center mx-4'>
             {
                 points?.map((point, idx)=> {
                     return(
