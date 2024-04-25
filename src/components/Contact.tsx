@@ -22,7 +22,7 @@ const formSchema = z.object({
     .max(50),
   email: z.string()
     .email()
-    .min(10,{ message: "Please enter a valid email" }),
+    .min(10, { message: "Please enter a valid email" }),
   message: z.string()
     .min(7, { message: "Atleast 7 characters are required" })
     .max(1050, { message: "Only 1050 characters are allowed" })
@@ -50,59 +50,68 @@ const Contact: React.FC = () => {
           ME
         </h1>
         <div className='px-10' >
-            <Form  {...form}>
-              <form onSubmit={form.handleSubmit(handleSubmit)}>
-                <FormField
-
-                  control={form.control}
-                  name="fullname"
-                  render={({ field }) => (
-                    <>
-                      <FormItem className='my-6'>
-                        <FormLabel>Full name*</FormLabel>
-                        <FormControl>
-                          <Input placeholder='Your name' className='bg-[#3f110ee1] focus:border-0 border-0 rounded-xl  px-6' {...field} />
-                        </FormControl>
-                        {/* <FormDescription>
+          <Form  {...form}>
+            <form onSubmit={form.handleSubmit(handleSubmit)}>
+              <FormField
+                control={form.control}
+                name="fullname"
+                render={({ field }) => (
+                  <>
+                    <FormItem className='my-6'>
+                      <FormLabel>Full name*</FormLabel>
+                      <FormControl>
+                        <Input placeholder='Your name' className='bg-[#3f110ee1] focus:border-0 border-0 rounded-xl  px-6' {...field} />
+                      </FormControl>
+                      {/* <FormDescription>
                       Enter your name
                     </FormDescription> */}
-                        <FormMessage />
-                      </FormItem>
-
-                      <FormItem className='my-6'>
-                        <FormLabel>E-mail*</FormLabel>
-                        <FormControl>
-                          <Input placeholder='E-mail' className='bg-[#3f110ee1] focus:border-0 border-0 rounded-xl px-6 ' />
-                        </FormControl>
-                        {/* <FormDescription>z
+                      <FormMessage />
+                    </FormItem>
+                  </>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className='my-6'>
+                    <FormLabel>E-mail*</FormLabel>
+                    <FormControl>
+                      <Input placeholder='E-mail' className='bg-[#3f110ee1] focus:border-0 border-0 rounded-xl px-6 ' {...field} />
+                    </FormControl>
+                    {/* <FormDescription>z
                       This is your current residential address
                     </FormDescription> */}
-                        <FormMessage />
-                      </FormItem>
-
-                      <FormItem className='my-6'>
-                        <FormLabel>Message*</FormLabel>
-                        <FormControl>
-                          <Textarea placeholder='Enter your message' className='bg-[#3f110ee1] resize-none focus:border-0 border-0 rounded-xl h-[10rem] px-6 pt-6 ' />
-                        </FormControl>
-                        {/* <FormDescription>
-                                        This is the category of your lost object
-                                    </FormDescription> */}
-                        <FormMessage />
-                      </FormItem>
-                    </>
-                  )}
-                />
-                <div className='text-center my-10'>
-                  <button
-                    className='font-bold bg-red-600 px-8 py-3 rounded-[4rem] text-center'
-                    type='submit'>Send Message</button>
-                </div>
-              </form>
-            </Form>
-          </div>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem className='my-6'>
+                    <FormLabel>Message*</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder='Enter your message' className='bg-[#3f110ee1] resize-none focus:border-0 border-0 rounded-xl h-[10rem] px-6 pt-6 '  {...field} />
+                    </FormControl>
+                    {/* <FormDescription>
+                                    This is the category of your lost object
+                                </FormDescription> */}
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div className='text-center my-10'>
+                <a
+                  className='font-bold bg-red-600 px-8 py-3 rounded-[4rem] text-center'
+                  href = {`mailto:sanjaym0919@gmail.com?subject = Message&body = ${"yes"}`}>Send Message</a>
+              </div>
+            </form>
+          </Form>
+        </div>
         <div className='flex justify-center  '>
-          
+
         </div>
       </div>
       <div className='flex flex-col justify-center '>

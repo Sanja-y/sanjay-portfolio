@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
        rounded-[4rem] justify-between items-center h-[6rem] pl-8 pr-8 overflow-clip'>
         <div className='flex flex-row space-x-[4rem] items-center justify-center'>
           <div>
-            <h3 className='text-[2rem] font-bold'>SM</h3>
+            <h3 className='text-[2rem] font-bold'>{`<SM/>`}</h3>
           </div>
         </div>
         <div className='flex flex-row items-center space-x-[5rem] text-[1rem] '>

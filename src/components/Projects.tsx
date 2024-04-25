@@ -115,7 +115,7 @@ const Projects: React.FC = () => {
               </div>
             </div>
 
-            <div className='flex flex-row-reverse h-[20rem] w-full overflow-hidden'>
+            <div className='flex flex-row-reverse h-[20rem] w-full overflow-hidden  max-md:flex-col'>
               <Card className='border-0 bg-[#161515] text-white w-[100%] h-[100%] rounded-none p-5' >
                 <CardHeader className='p-0 '>
                   <div className='mt-2 p-6'>
@@ -145,7 +145,7 @@ const Projects: React.FC = () => {
 
               </div>
             </div>
-            
+
             <div className='flex h-[20rem] w-full overflow-hidden'>
               <Card className='border-0 bg-[#161515] text-white w-[100%] h-[100%] rounded-l-md rounded-r-none p-5' >
                 <CardHeader className='p-0 '>
@@ -172,7 +172,7 @@ const Projects: React.FC = () => {
               </Card>
               <div className='w-full h-full px-4 py-4 bg-[#202020]'>
 
-                <img src="/assets/thupparivalan.jpg" alt="StageOne" className='rounded-md w-[100%] h-full' style={{ objectFit: "cover" }} />
+                <img src="/assets/thupparivalan.jpg" alt="StageOne" className='rounded-md w-[100%]' style={{ objectFit: "cover" }} />
 
               </div>
             </div>

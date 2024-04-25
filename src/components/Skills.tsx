@@ -50,6 +50,54 @@ const row_1 = [
     link: "https://expressjs.com/",
     // score: 8,
   },
+  {
+    skill: "Sass/Scss",
+    src: "icon-sass-652291bc",
+    link: "https://sass-lang.com/",
+    // score: 8,
+  },
+  {
+    skill: "TailwindCSS",
+    src: "icon-tailwindcss-6ab43fd7",
+    link: "https://tailwindcss.com/",
+    // score: 8,
+  },
+  {
+    skill: "Figma",
+    src: "icon-figma-6ce9f699",
+    link: "https://www.figma.com/",
+    // score: 8,
+  },
+  {
+    skill: "Storybook",
+    src: "icon-storybook-987cb8af",
+    link: "https://storybook.js.org/",
+    // score: 8,
+  },
+  {
+    skill: "Git",
+    src: "icon-git-c96ba05f",
+    link: "https://git-scm.com/",
+    // score: 8,
+  },
+  {
+    skill: "MongoDB",
+    src: "icon-mongodb-48a77890",
+    link: "https://www.mongodb.com/",
+    // score: 9,
+  },
+  {
+    skill: "Material UI",
+    src: "icon-material-ui-1969274b",
+    link: "https://mui.com/",
+    // score: 8,
+  },
+  {
+    skill: "VS Code",
+    src: "icon-visual-studio-code-fb90a4a6",
+    link: "https://code.visualstudio.com/",
+    // score: 8,
+  },
 
 ]
 const row_2 = [
@@ -145,29 +193,29 @@ const Skills: React.FC = () => {
         </div>
 
       </div> */}
-      <div className='flex flex-col justify-center items-center space-y-14 flex-wrap'>
-        <div className='flex '>
-          {
-            row_1.map((data, idx) => {
-              return (
+      <div className='grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12'>
+        {/* <div className='flex space-x-24 justify-center items-center '> */}
+        {
+          row_1.map((data, idx) => {
+            return (
+              <div className='flex flex-col items-center justify-center gap-4' key={idx}>
                 <a href={data.link} target='_blank'>
-                  <div className='flex flex-col items-center justify-end w-[10rem] h-[10rem] space-y-5' key={idx}>
-                    <img src={`/assets/skills/${data.src}.svg`} alt={data.skill} width={"64px"}
-                      className='hover:scale-105 transition-all duration-300' />
-                    <h6 className='whitespace-nowrap '>{data.skill}</h6>
-                  </div>
+                  <img src={`/assets/skills/${data.src}.svg`} alt={data.skill} width={"64px"} height={"64px"}
+                    className='hover:scale-105 transition-all duration-300 h-[64px]' />
                 </a>
+                <h6 className='whitespace-nowrap '>{data.skill}</h6>
+              </div>
 
-              )
-            })
-          }
-        </div>
-        <div className='flex'>
+            )
+          })
+        }
+        {/* </div> */}
+        {/* <div className='flex space-x-24 '>
           {
             row_2.map((data, idx) => {
               return (
                 <a href={data.link} target='_blank'>
-                  <div className='flex flex-col items-center justify-end w-[10rem] h-[10rem] space-y-5' key={idx}>
+                  <div className='flex flex-col items-center justify-end h-[10rem] space-y-5' key={idx}>
                     <img src={`/assets/skills/${data.src}.svg`} alt={data.skill} width={"64px"}
                       className='hover:scale-105  transition-all duration-300' />
                     <h6 className='whitespace-nowrap '>{data.skill}</h6>
@@ -177,9 +225,9 @@ const Skills: React.FC = () => {
               )
             })
           }
-        </div>
+        </div> */}
       </div>
-    </div>
+    </div >
   )
 }
 
