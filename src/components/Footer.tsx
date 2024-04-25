@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               {
                 links?.map((link, idx) => {
                   return (
-                    <a className='hover:text-[#db1717] transition-all 350ms focus:text-[#a01a1a] focus:underline underline-offset-2' href={`#${link}`}>{link}</a>
+                    <a className='hover:text-[#db1717] transition-all 350ms focus:text-[#a01a1a] focus:underline underline-offset-2' href={`#${link}`} key={idx}>{link}</a>
                   )
                 })
               }
