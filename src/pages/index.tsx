@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-[#161515]  font-montserrat w-full h-full py-8  ">
+      <div className="bg-[#161515]  font-montserrat w-full h-full py-8 ">
         <div className="text-[#fff8f8] font-semibold w-full relative">
           <Navbar />
           <div className=" relative w-full">
